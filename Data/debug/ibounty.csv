@@ -1,0 +1,2 @@
+Credits,Crime Comitted,Faction Bounty,Victim
+{DEC:EDDI bounty incurred bounty}cr,{TXT:EDDI bounty incurred crimetype},{TXT:EDDI bounty incurred faction},{TXT:EDDI bounty incurred victim}

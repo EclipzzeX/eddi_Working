@@ -1,0 +1,3 @@
+﻿Status,System,System Info
+Supercruise,{TXT:EDDI entered supercruise system} system, none
+Normal,{TXT:EDDI entered normal space system} system,{TXT:EDDI entered normal space bodytype} {TXT:EDDI entered normal space body}

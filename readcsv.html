@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>jquery.csv-calc</title>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.csv-calc.js"></script>
+
+<script>
+  $(function() {
+    $('#bounties').csvCalc('data/bounty.csv');
+  });
+</script>
+
+</head>
+
+<body>
+
+<h1>Demo 1</h1>
+<table id="bounties">
+  <tr class="th">
+    <th>Date</th>
+    <th>Time</th>
+    <th>Bounty</th>
+    <th>Total</th>
+    <th>Faction</th>
+    <th>Wing</th>
+  </tr>
+  <tr class="bounties" data-csvcalc-repeat>
+    <td data-csvcalc-cell="0" data-csvcalc-id></td>
+    <td data-csvcalc-cell="1"></td>
+    <td data-csvcalc-cell="2" data-csvcalc-price class="reward"></td>
+    <td data-csvcalc-cell="3"></td>
+    <td data-csvcalc-cell="4"></td>
+    <td data-csvcalc-cell="5"></td>
+    <!-- // <td><input data-csvcalc-input class="amount" type="number" min="0" value="1"></td> -->
+    <td data-csvcalc-sum=data-csvcalc-price>data-csvcalc-price </td>
+    data-sum = data-sum += data-csvcalc-price;
+  </tr>
+  <tr class="th">
+    <th colspan="4" class="th-total">total</th>
+    <!-- <td data-csvcalc-total class="total">0</td> -->
+    <td data-sum class="total">0</td>
+  </tr>
+</table>
+
+</body>
+
+</html>

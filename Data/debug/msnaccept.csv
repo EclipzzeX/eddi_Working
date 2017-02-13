@@ -1,0 +1,4 @@
+Community Goal,Mission Name,Faction,System,Mission ID
+True,{TXT:EDDI mission accepted name},{TXT:EDDI mission accepted faction},{TXT:EDDI mission accepted system},{DEC:EDDI mission accepted missionid}
+False,{TXT:EDDI mission accepted name},{TXT:EDDI mission accepted faction},{TXT:EDDI mission accepted system},{DEC:EDDI mission accepted missionid}
+False,Ram Tah Appeal for Ancient Data,Meene,Not set,Not setFalse,Mission_Courier_Boom,HIP 33368 Resistance,Not set,75464910

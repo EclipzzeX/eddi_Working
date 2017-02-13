@@ -1,0 +1,9 @@
+Date,Time﻿,Station,Docking Status,Landing pad or Reason
+{DATEDAY}-{DATEMONTH}-{DATEYEAR},{TIME},{TXT:EDDI docking cancelled station},Cancelled,N/A
+{DATEDAY}-{DATEMONTH}-{DATEYEAR},{TIME},{TXT:EDDI docking denied station},Denied,{TXT:EDDI docking denied reason}
+{DATEDAY}-{DATEMONTH}-{DATEYEAR},{TIME},{TXT:EDDI docking granted station},Granted,Landing Pad - {INT:EDDI docking granted landingpad}
+21-January-2017,16:28,Barjavel Station,Granted,Landing Pad - 5
+21-January-2017,20:19,Barjavel Station,Granted,Landing Pad - 33
+21-January-2017,20:29,Barjavel Station,Granted,Landing Pad - 33
+21-January-2017,20:57,Barjavel Station,Granted,Landing Pad - 8
+21-January-2017,21:18,Barjavel Station,Granted,Landing Pad - 41

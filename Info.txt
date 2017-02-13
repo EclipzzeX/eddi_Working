@@ -1,0 +1,53 @@
+This is a catchall file for "STUFF"
+
+Set [eclipsex total awarded reward] assigns it to [Saved Value]
+
+Set [eclipsex total awarded reward] absolute value of [[DEC:EDDI bounty awarded reward]] save value to profile
+
+Set [endresult] = [enresult] + [eclipsex total awarded reward] save to profile
+
+Set [eclipsex total bounty kills] to [Saved Value]
+
+Set [eclipsex total bounty kills] to [eclipsex total bounty kills] + 1 save to profile
+
+
+Write to HTML file
+D:\xampp\htdocs\eddi\bounty.html
+
+Kills,Reward,Total,Wing
+{DEC:eclipsex total bounty kills},{DEC:eclipsex total awarded reward},{DEC:endresult},{BOOL:EDDI bounty awarded shared}
+
+
+
+Set Dec [afstand] to [Saved Value]
+Set int [jumpsdone] value to [savedvalue]
+set int [jumpsdone] to [jumpsdone] + 1 [save value to profile]
+set dec [afstand] to [afstand]  + [{DEC:EDDI jumped distance}] (save value to profile)
+write to file
+
+{TXT:EDDI docked station},{TXT:EDDI docked model},{TXT:EDDI docked system},{TXT:EDDI docked economy},{TXT:EDDI docked faction},{TXT:EDDI docked factionstate},{TXT:EDDI docked government}
+
+
+{TXT:EDDI jumped system},{DEC:XAxis}','{DEC:YAxis}','{DEC:ZAxis},{TXT:EDDI jumped security},{TXT:EDDI jumped economy},{TXT:EDDI jumped government},{TXT:EDDI jumped allegiance},{TXT:EDDI jumped faction},{TXT:EDDI jumped factionstate},{DEC:FuelUsed} tons,{DEC:FuelLevel}% {TXT:Warning}
+
+{TXT:EDDI entered supercruise system} system
+
+
+DROPPED TO NORMAL SPACE:
+You have returned to normal space near {TXT:EDDI entered normal space bodytype} {TXT:EDDI entered normal space body} in the {TXT:EDDI entered normal space system} system.
+--------
+
+
+  <div id="travel-html">
+    <meta http-equiv="refresh" content="10">
+    <h3>Travel Information</h3>
+
+  </div>
+
+
+
+  <div id="systems-html">
+    <meta http-equiv="refresh" content="10">
+    <h3>Systems Information</h3>
+
+  </div>

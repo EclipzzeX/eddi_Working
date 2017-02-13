@@ -1,0 +1,2 @@
+Date,Station,Docking Status,Launchpad or Reason
+{DATE},{TXT:EDDI docking requested station},Requested,

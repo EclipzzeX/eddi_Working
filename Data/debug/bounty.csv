@@ -1,0 +1,3 @@
+"Kills","Reward","Total","Who Died","Wing"
+V1{DEC:eclipsex total bounty kills},{DEC:eclipsex total awarded reward},{DEC:endresult},{BOOL:EDDI bounty awarded shared}
+V2{Calculated Total},{DEC:EDDI bounty awarded reward},{Calculated Total},{TXT:EDDI bounty awarded target} of the {TXT:EDDI bount awarded faction} faction,

@@ -1,0 +1,14 @@
+"Date","Time","Scan for","Class,Distance from arrival","Atmosphere","Surface Gravity","Surface Temperature","Tidally Locked","Terraform State","Landable","Volcanism","Eccentricity","Orbital Inclination","Orbital Period","Rotational Period","Periapsis","Pressure","Semi-major axis"
+,,HR 3506 1,Sudarsky class III gas giant,764.52ls,,5.83G,376.19 °F,False,,False,,0.0006,0.24°,673.57 days,1.19 days,298.79°,0 atm,1.53 AU
+,,HR 3506 4,Sudarsky class III gas giant,1874.77ls,,8.43G,298.51 °F,False,,False,,0.0053,-0.87°,2587.54 days,0.62 days,347.97°,0 atm,3.76 AU
+,,HR 3506 1 a,Rocky body,760.99ls,,0.16G,183.82 °F,True,,True,,0.0000,-0.12°,4.49 days,4.49 days,25.94°,0 atm,0.01 AU
+,,HR 3506 3,Sudarsky class III gas giant,1382.49ls,,5.11G,184.13 °F,False,,False,,0.0022,0.01°,1637.42 days,0.49 days,62.80°,0 atm,2.77 AU
+,,HR 3506 2,Sudarsky class III gas giant,1127.25ls,,11.77G,579.38 °F,False,,False,,0.0034,0.50°,1212.53 days,0.84 days,348.88°,0 atm,2.27 AU
+,,HR 3506 2 g,Icy body,1133.99ls,hot thick water atmosphere,0.16G,3091.64 °F,True,,False,,0,-80.07°,62.84 days,62.84 days,224.93°,25225.35 atm,0.05 AU
+,,HR 3506 1 c,Rocky body,753.45ls,,0.19G,165.73 °F,True,,True,,0.0000,-1.46°,25.01 days,25.01 days,329.62°,0 atm,0.02 AU
+,,HR 3506 1 b,Rocky body,770.05ls,,0.16G,173.01 °F,True,,True,,0.0009,-2.80°,11.09 days,11.09 days,68.44°,0 atm,0.01 AU
+,,HR 3506 2 a,Rocky body,1126.18ls,,0.07G,161.35 °F,True,,True,minor metallic magma volcanism,0.0001,-0.15°,1.27 days,1.27 days,9.60°,0 atm,0.00 AU
+,,HR 3506 2 d,Rocky body,1126.36ls,,0.08G,122.58 °F,True,,True,,0.0004,-0.01°,3.82 days,3.82 days,358.21°,0 atm,0.01 AU
+,,HR 3506 2 b,Rocky body,1127.76ls,,0.08G,135.07 °F,False,,True,major silicate vapour geysers volcanism,0.1707,-7.85°,0.39 days,0.43 days,306.11°,0 atm,0.00 AU
+,,HIP 72358 2,High metal content body,77.00ls,,1.54G,964.37 °F,True,,True,metallic magma volcanism,0.0000,0.02°,20.58 days,20.73 days,85.45°,0 atm,0.15 AU
+,,HIP 72358 3,High metal content body,140.05ls,,1.53G,596.34 °F,True,,True,metallic magma volcanism,0.0000,0.00°,50.48 days,50.84 days,229.45°,0 atm,0.28 AU

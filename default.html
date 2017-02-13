@@ -1,0 +1,383 @@
+<html>
+<head>
+  <title>E:D WIP</title>
+<!--
+  // **************************************************************************
+  //
+  // 2017-02-11 - Bring d3Summary.js Function to life
+  //
+  // **************************************************************************
+-->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ==================================================
+  Bootstrap core core CSS
+  ================================================== -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/dataTables.bootstrap.css" rel="stylesheet">
+  <link href="css/mine.css" rel="stylesheet">
+
+  <!-- ==================================================
+  Bootstrap core JavaScript
+  ================================================== -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easytabs.js"</script>
+  <script src="js/jquery.hashchange.js"</script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.csv.min.js"></script>
+  <script src="js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.bootstrap.js"></script>
+  <script src='js/csv_to_html_table.js'></script>
+  <script src="js/d3.min.js"></script>
+  <script src="js/d3Summary.js"></script>
+
+  <script type="text/javascript">
+    $(document).ready( function() {
+      $('#tab-container').easytabs(
+        {
+          animate: false
+        }
+      );
+    });
+  </script>
+
+  <script type="text/JavaScript">
+    function TimedRefresh( t ) {
+      setTimeout("location.reload(true);", t);
+    }
+  </script>
+
+</head>
+
+<body onload="JavaScript:TimedRefresh(10000);">
+</body>
+
+<div id="tab-container" class='tab-container'>
+ <ul class='etabs'>
+   <li class='tab'><a href="#gameinfo-html">Game Info</a></li>
+   <li class='tab'><a href="#bounty-html">Bounty</a></li>
+   <li class='tab'><a href="#docking-html">Docking</a></li>
+   <li class='tab'><a href="#missions-html">Missions</a></li>
+   <li class='tab'><a href="#travel-html">Travel</a></li>
+   <li class='tab'><a href="#systems-html">Systems</a></li>
+   <li class='tab'><a href="#commodities-html">Commodities</a></li>
+   <li class='tab'><a href="#ship-html">ShipInfo</a></li>
+ </ul>
+
+ <script>
+ var datTables=[
+       {"flag": "gi","file": "data/GameInfo.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "gi","file": "data/progress.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "gi","file": "data/LoginHistory.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "bo","file": "data/bountyhistory.csv","c1":"","c2": "","sums": "n"},
+       {"flag": "bo","file": "Data/bounty.csv","c1": "Date","c2": "Reward","sums": "y"},
+       {"flag": "bo","file": "Data/ibounty.csv","c1": "Date","c2": "Credits","sums": "y"},
+       {"flag": "bo","file": "data/conflictzone.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "do","file": "data/dockinfo.csv","c1": "Station","c2": "","sums": "y"},
+       {"flag": "do","file": "data/dockingreq.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "do","file": "data/dockinghistory.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "mi","file": "data/msnaccept.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "mi","file": "data/msncomplete.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "mi","file": "data/msnabort.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "tr","file": "data/jumpinfo.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "tr","file": "data/currentjump.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "tr","file": "data/supercruise.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "sy","file": "data/bodyscan.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "co","file": "data/BuyCommodity.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "co","file": "data/SellCommodity.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "co","file": "data/CargoEjected.csv","c1": "","c2": "","sums": "n"},
+       {"flag": "sh","file": "data/ShipHealth.csv","c1": "","c2": "","sums": "n"}
+     ];
+</script>
+
+<script>
+     function myFunction(iFlag) {
+        for (var data_id = 0; data_id < datTables.length; data_id++) {
+          if (datTables[data_id].flag == iFlag)
+            {
+              Stuff.push ([datTables[data_id].file]);
+            }
+          if (datTables[data_id].flag == iFlag && datTables[data_id].sums == "y")
+            {
+              Front.push ([datTables[data_id].file]);
+              col1.push ([datTables[data_id].c1]);
+              col2.push ([datTables[data_id].c2]);
+            }
+        }
+    }
+ </script>
+
+ <div class='panel-container'>
+
+    <div id="gameinfo-html">
+      <h3>Game Information</h3>
+      <div class="container-fluid">
+      <div id='1table-container'></div>
+        <b>Current Login Information</b>
+      <div id='1table-container0'></div>
+        <b>Progress</b>
+      <div id='1table-container1'></div>
+        <b>Login History</b>
+      <div id='1table-container2'></div>
+        <b>Bounty Summary</b>
+      </div>
+
+    </div id>
+
+     <div id="bounty-html">
+       <h3>Bounty Information</h3>
+       <div class="container-fluid">
+       <div id='2table-container'></div>
+         <b>Bounty History</b>
+       <div id='2table-container0'></div>
+       <b> Bounty Reward Summary</b>
+       <div id='bfunction-container0'></div> <br>
+       <b> Incurred Bounty Reward Summary</b>
+       <div id='bfunction-container1'></div> <br>
+         <b>Bounty Info</b>
+       <div id='2table-container1'></div>
+         <b>Bounty Incurred</b>
+       <div id='2table-container2'></div>
+         <b>Conflict Zones (WIP)</b>
+       <div id='2table-container3'></div>
+      </div>
+
+      <script>
+        var Stuff = [];
+        var Front = [];
+        var col1 = [];
+        var col2 = [];
+
+        myFunction("bo");
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '2table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+
+
+//        myFunction2("y");
+//                  //console.log(Front[0]);
+      for (var data_id = 0; data_id < Front.length; data_id++) {
+          d3Summary.init(
+            {
+              csv_path: Front[data_id],
+              element:  'bfunction-container'+data_id,
+              columns:  [col1[data_id],col2[data_id]],
+              headers:  [col1[data_id],col2[data_id]]
+            }
+          );
+        };
+       </script>
+     </div id>
+
+     <div id="docking-html">
+       <h3>Docking Information</h3>
+       <div class="container-fluid">
+         <b> Docking Summary</b>
+         <div id='dfunction-container0'></div> <br>
+       <div id='3table-container'></div>
+         <b>Docking Info v2</b>
+       <div id='3table-container0'></div>
+         <b>Docking Request Status v2</b>
+       <div id='3table-container1'></div>
+      </div>
+
+      <script>
+        var Stuff = [];
+        var Front = [];
+        var col1 = [];
+        var col2 = [];
+        myFunction("do");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '3table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+          //myFunction2("y");
+                //console.log(Front[0]);
+          for (var data_id = 0; data_id < Front.length; data_id++) {
+            d3Summary.init(
+              {
+                csv_path: Front[data_id],
+                element:  'dfunction-container'+data_id,
+                columns:  [col1[data_id],col2[data_id]],
+                headers:  [col1[data_id],col2[data_id]]
+              }
+            );
+          };
+      </script>
+     </div id>
+
+     <div id="missions-html">
+       <h3>Mission Information</h3>
+       <div class="container-fluid">
+       <div id='4table-container'></div>
+         <b>Mission Accepted v2</b>
+       <div id='4table-container0'></div>
+         <b>Missions Completed v2</b>
+       <div id='4table-container1'></div>
+         <b>Mission Aborted</b>
+       <div id='4table-container2'></div>
+      </div>
+
+      <script>
+        var Stuff = [];
+        myFunction("mi");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '4table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+      </script>
+     </div id>
+
+     <div id="travel-html">
+       <h3>Travel Information</h3>
+       <div class="container-fluid">
+       <div id='5table-container'></div>
+         <b>Jump History v2</b>
+       <div id='5table-container0'></div>
+          <b>Current Jump</b>
+       <div id='5table-container1'></div>
+         <b>Crusing</b>
+       <div id='5table-container2'></div>
+
+
+      </div>
+<!--
+      <div id="travel-container" class='tab-container'>
+       <ul class='etabs'>
+         <li class='tab'><a href="#travel2-html">Current Jump</a></li>
+         <li class='tab'><a href="#travel3-html">Cruising</a></li>
+       </ul>
+     </div id>
+
+     <div id="travel2-html">
+       <h3> Current Jump Information</h3>
+       <div class="container-fluid2">
+       <div id='5atable-container'></div>
+       <b>Current Jump v2</b>
+       <div id='5atable-container0'></div>
+
+
+    <div id="travel3-html">
+      <h3> Cruising Information</h3>
+      <div class="container-fluid3">
+      <div id='5btable-container'></div>
+      <b>Cruise Status</b>
+      <div id='5btable-container0'></div>
+    </div>
+  </div id>
+-->
+
+      <script>
+        var Stuff = [];
+        myFunction("tr");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '5table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+      </script>
+     </div id>
+
+
+     <div id="systems-html">
+       <h3>Systems Information</h3>
+       <div class="container-fluid">
+       <div id='6table-container'></div>
+          <b>Bodyscan v2</b>
+       <div id='6table-container0'></div>
+       </div>
+
+      <script>
+        var Stuff = [];
+        myFunction("sy");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '6table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+      </script>
+    </div id>
+
+     <div id="commodities-html">
+       <h3>Commodities</h3>
+       <div class="container-fluid">
+       <div id='7table-container'></div>
+         <b>Buy</b>
+       <div id='7table-container0'></div>
+         <b>Sell</b>
+       <div id='7table-container1'></div>
+         <b>Ejected</b>
+       <div id='7table-container2'></div>
+       </div>
+
+      <script>
+        var Stuff = [];
+        myFunction("co");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '7table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+      </script>
+     </div id>
+
+     <div id="ship-html">
+       <h3>Ship Information</h3>
+       <div class="container-fluid">
+       <div id='8table-container'></div>
+         <b>Damage Report</b>
+       <div id='8table-container0'></div>
+       </div>
+
+      <script>
+        var Stuff = [];
+        myFunction("sh");
+        // document.getElementById("demo").innerHTML = Stuff;
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '8table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+      </script>
+     </div id>
+</div>
+</html>

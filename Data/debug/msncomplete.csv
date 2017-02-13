@@ -1,0 +1,6 @@
+Community Goal,Mission completed,Faction,Reward,System,Mission ID,Donated
+True,{TXT:EDDI mission completed name},{TXT:EDDI mission completed faction},{DEC:EDDI mission completed reward}cr,{TXT:EDDI mission completed system},{DEC:EDDI mission completed missionid},False
+True,{TXT:EDDI mission completed name},{TXT:EDDI mission completed faction},{DEC:EDDI mission completed reward}cr,{TXT:EDDI mission completed system},{DEC:EDDI mission completed missionid},False
+True,{TXT:EDDI mission completed name},{TXT:EDDI mission completed faction},{DEC:EDDI mission completed reward}cr,{TXT:EDDI mission completed system},{DEC:EDDI mission completed missionid},0cr
+False,{TXT:EDDI mission completed name},{TXT:EDDI mission completed faction},0cr,{TXT:EDDI mission completed system},{DEC:EDDI mission completed missionid},{DEC:EDDI mission completed donation}cr
+False,{TXT:EDDI mission completed name},{TXT:EDDI mission completed faction},{DEC:EDDI mission completed reward}cr,{TXT:EDDI mission completed system},{DEC:EDDI mission completed missionid},0cr

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get a new array with the full name of each person in the array.</p>
+<button onclick="myFunction()">Try it</button>
+
+<p>New array: <span id="demo"></span></p>
+
+<script>
+
+ var datTables=[
+       {flag: "gi",file: 'data/GameInfo.csv'},
+       {flag: 'gi',file: 'data/progress.csv'},
+       {flag: 'gi',file: 'data/LoginHistory.csv'},
+       {flag: 'bo',file: 'data/bountyhistory.csv'},
+       {flag: 'bo',file: 'data/bounty.csv'},
+       {flag: 'bo',file: 'data/ibounty.csv'},
+       {flag: 'bo',file: 'data/conflictzone.csv'},
+       {flag: 'do',file: 'data/dockinfo.csv'},
+       {flag: 'do',file: 'data/dockingreq.csv'},
+       {flag: 'do',file: 'data/dockinghistory.csv'},
+       {flag: 'mi',file: 'data/msnaccept.csv'},
+       {flag: 'mi',file: 'data/msncomplete.csv'},
+       {flag: 'mi',file: 'data/msnabort.csv'},
+       {flag: 'tr',file: 'data/jumpinfo.csv'},
+       {flag: 'tr',file: 'data/currentjump.csv'},
+       {flag: 'tr',file: 'data/supercruise.csv'},
+       {flag: 'sy',file: 'data/bodyscan.csv'},
+       {flag: 'co',file: 'data/BuyCommodity.csv'},
+       {flag: 'co',file: 'data/SellCommodity.csv'},
+       {flag: 'co',file: 'data/CargoEjected.csv'}
+     ];
+
+    function myFunction() {
+    	var Stuff = [];
+
+    	for (var data_id = 0; data_id < datTables.length; data_id++) {
+    		if (datTables[data_id].flag == "bo")
+            	{
+                   Stuff.push ("\"" + [datTables[data_id].file] + "\"");
+                    // [datTables[data_id].file];
+        		}
+       }
+
+		document.getElementById("demo").innerHTML = Stuff;
+    }
+
+ </script>
+
+</body>
+</html>

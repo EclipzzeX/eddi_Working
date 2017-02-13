@@ -1,0 +1,46 @@
+COMMODITY COLLECTED,
+{TXT:EDDI commodity collected commodity} (STOLEN)
+{TXT:EDDI commodity collected commodity} (NOT STOLEN)
+Date,Time,Commodity,Commodity,Price per unit,Profit per unit,Transaction total,Total profit,Stolen,Illegal
+Date,Time,Quantity,COMMODITY PURCHASED,Price per Unit,Transaction Total
+{DATEDAY}-{DATEMONTH}-{INT:GameYear},{TIME},{INT:EDDI commodity purchased amount} tons,{TXT:EDDI commodity purchased commodity},{DEC:EDDI commodity purhased price}cr per ton,{DEC:TotalCost}cr
+--------
+
+CARGO JETTISONED:
+{INT:EDDI commodity ejected amount} tons of {TXT:EDDI commodity ejected commodity} (ABANDONED)
+{INT:EDDI commodity ejected amount} tons of {TXT:EDDI commodity ejected commodity} (NOT ABANDONED)
+-------
+
+COMMODITY REFINED:
+{TXT:EDDI commodity refined commodity} refined.
+--------
+
+COMMODITY SOLD TO BLACK MARKET:
+Commodity: {TXT:EDDI commodity sold commodity}
+Amount: {INT:EDDI commodity sold amount} tons
+Price per unit: {DEC:EDDI commodity sold price}cr
+Profit per unit: {DEC:EDDI commodity sold profit}cr
+Transaction total: {DEC:TransTotal}cr
+Total profit: {DEC:ProfitTotal}cr
+Stolen: {BOOL:IsStolen}
+Illegal: {BOOL:IsIllegal}
+--------
+
+
+COMMODITY SOLD:
+Commodity: {TXT:EDDI commodity sold commodity}
+Amount: {INT:EDDI commodity sold amount} tons
+Price per unit: {DEC:EDDI commodity sold price}cr
+Profit per unit: {DEC:EDDI commodity sold profit}cr
+Transaction total: {DEC:TransTotal}cr
+Total profit: {DEC:ProfitTotal}cr
+Stolen: {BOOL:IsStolen}
+Illegal: {BOOL:IsIllegal}
+--------
+
+
+
+{DATEDAY}-{DATEMONTH}-{INT:GameYear},{TIME},
+
+
+{DATEDAY}-{DATEMONTH}-{INT:GameYear},{TIME},{INT:EDDI commodity purchased amount} tons,{TXT:EDDI commodity purchased commodity},{DEC:EDDI commodity purhased price}cr per ton,{DEC:TotalCost}cr

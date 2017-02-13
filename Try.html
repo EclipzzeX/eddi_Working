@@ -1,0 +1,93 @@
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="10">
+
+		<!-- Bootstrap core CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/dataTables.bootstrap.css" rel="stylesheet">
+		<link href="css/mine.css" rel="stylesheet">
+
+		<style>
+	    /* Example Styles for Demo */
+	    .etabs { margin: 0; padding: 0; }
+	    .tab { display: inline-block; zoom:1; *display:inline; background: #eee; border: solid 1px #999; border-bottom: none; -moz-border-radius: 4px 4px 0 0; -webkit-border-radius: 4px 4px 0 0; }
+	    .tab a { font-size: 14px; line-height: 2em; display: block; padding: 0 10px; outline: none; }
+	    .tab a:hover { text-decoration: underline; }
+	    .tab.active { background: #fff; padding-top: 6px; position: relative; top: 1px; border-color: #666; }
+	    .tab a.active { font-weight: bold; }
+	    .tab-container .panel-container { background: #fff; border: solid #666 1px; padding: 10px; -moz-border-radius: 0 4px 4px 4px; -webkit-border-radius: 0 4px 4px 4px; }
+	    .panel-container { margin-bottom: 10px; }
+	  </style>
+
+		<script type="text/javascript">
+	    $(document).ready( function() {
+	      $('#tab-container').easytabs();
+	    });
+	  </script>
+
+	</head>
+
+	<body>
+
+		<h3>Bounty Information</h3>
+
+
+ 		<div class="container-fluid">
+		<div id='table-container'></div>
+
+			<b>Bounty v2</b>
+				<div id='table-container0'></div>
+			<b>Bounty Incurred v2</b>
+				<div id='table-container1'></div>
+			<b>Conflict Zones</b>
+				<div id='table-container2'></div>
+
+  </div>
+
+	<footer class='footer'>
+		<div class='container-fluid'>
+			<hr />
+			<!-- <p class='pull-right'><a href='Some Website address'>CSV to HTML Table</a> by <a href='Some Website Address'>Me</a></p> -->
+		</div>
+	</footer>
+
+	<!-- ==================================================
+  Bootstrap core JavaScript
+	================================================== -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easytabs.js"</script>
+	<script src="js/jquery.hashchange.js"</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.csv.min.js"></script>
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.bootstrap.js"></script>
+	<script src='js/csv_to_html_table.js'></script>
+
+
+	<script>
+		var data_id, dat = [
+			"data/bounty.csv",
+			"data/ibounty.csv",
+
+			// TODO: Add the following to Version two status
+			"data/conflictzone.csv",
+		];
+
+		for (var data_id = 0; data_id < dat.length; data_id++) {
+			CsvToHtmlTable.init(
+				{
+						csv_path: dat[data_id],
+						element: 'table-container'+data_id,
+						csv_options: {separator: ',', delimiter: '""'}
+				}
+			);
+		};
+
+	</script>
+
+
+</body>
+<html>

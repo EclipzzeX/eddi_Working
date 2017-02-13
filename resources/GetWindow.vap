@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Profile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>d1886220-4738-4c19-8711-17a01c7be872</Id>
+  <Name>2.0 Astra Full house - Guardians Plugins</Name>
+  <Commands>
+    <Command>
+      <Id>652672c8-a331-4658-8735-01c0d57d1f04</Id>
+      <CommandString>Get window</CommandString>
+      <ActionSequence>
+        <CommandAction>
+          <PairingSet>false</PairingSet>
+          <PairingSetElse>false</PairingSetElse>
+          <Ordinal>0</Ordinal>
+          <ConditionMet xsi:nil="true" />
+          <IndentLevel>0</IndentLevel>
+          <ConditionSkip>false</ConditionSkip>
+          <Id>6b0c85b4-c7d3-4a80-8b74-e7ed135cda14</Id>
+          <ActionType>MouseAction</ActionType>
+          <Duration>0</Duration>
+          <Delay>0</Delay>
+          <KeyCodes />
+          <Context>SPECIAL</Context>
+          <Context2 xml:space="preserve">Application Center</Context2>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <InputMode>0</InputMode>
+          <ConditionPairing>0</ConditionPairing>
+          <ConditionGroup>0</ConditionGroup>
+          <ConditionStartOperator>0</ConditionStartOperator>
+          <ConditionStartValue>0</ConditionStartValue>
+          <ConditionStartValueType>0</ConditionStartValueType>
+          <ConditionStartType>0</ConditionStartType>
+          <DecimalContext1>0</DecimalContext1>
+          <DecimalContext2>0</DecimalContext2>
+          <DateContext1>0001-01-01T00:00:00</DateContext1>
+          <DateContext2>0001-01-01T00:00:00</DateContext2>
+          <Disabled>false</Disabled>
+          <RandomSounds />
+          <IsSuffixAction>false</IsSuffixAction>
+          <DecimalTransient1>0</DecimalTransient1>
+        </CommandAction>
+        <CommandAction>
+          <PairingSet>false</PairingSet>
+          <PairingSetElse>false</PairingSetElse>
+          <Ordinal>0</Ordinal>
+          <ConditionMet xsi:nil="true" />
+          <IndentLevel>0</IndentLevel>
+          <ConditionSkip>false</ConditionSkip>
+          <Id>ef4a7922-908d-4495-a67a-051de80797bf</Id>
+          <ActionType>MouseAction</ActionType>
+          <Duration>0</Duration>
+          <Delay>0.1</Delay>
+          <KeyCodes />
+          <Context>LC</Context>
+          <X>0</X>
+          <Y>0</Y>
+          <Z>0</Z>
+          <InputMode>0</InputMode>
+          <ConditionPairing>0</ConditionPairing>
+          <ConditionGroup>0</ConditionGroup>
+          <ConditionStartOperator>0</ConditionStartOperator>
+          <ConditionStartValue>0</ConditionStartValue>
+          <ConditionStartValueType>0</ConditionStartValueType>
+          <ConditionStartType>0</ConditionStartType>
+          <DecimalContext1>0</DecimalContext1>
+          <DecimalContext2>0</DecimalContext2>
+          <DateContext1>0001-01-01T00:00:00</DateContext1>
+          <DateContext2>0001-01-01T00:00:00</DateContext2>
+          <Disabled>false</Disabled>
+          <RandomSounds />
+          <IsSuffixAction>false</IsSuffixAction>
+          <DecimalTransient1>0</DecimalTransient1>
+        </CommandAction>
+      </ActionSequence>
+      <Async>true</Async>
+      <Enabled>true</Enabled>
+      <Category>Misc</Category>
+      <UseShortcut>false</UseShortcut>
+      <keyValue>0</keyValue>
+      <keyShift>0</keyShift>
+      <keyAlt>0</keyAlt>
+      <keyCtrl>0</keyCtrl>
+      <keyWin>0</keyWin>
+      <keyPassthru>true</keyPassthru>
+      <UseSpokenPhrase>true</UseSpokenPhrase>
+      <onlyKeyUp>false</onlyKeyUp>
+      <RepeatNumber>2</RepeatNumber>
+      <RepeatType>0</RepeatType>
+      <CommandType>0</CommandType>
+      <SourceProfile>00000000-0000-0000-0000-000000000000</SourceProfile>
+      <UseConfidence>false</UseConfidence>
+      <minimumConfidenceLevel>0</minimumConfidenceLevel>
+      <UseJoystick>false</UseJoystick>
+      <joystickNumber>0</joystickNumber>
+      <joystickButton>0</joystickButton>
+      <joystickNumber2>0</joystickNumber2>
+      <joystickButton2>0</joystickButton2>
+      <joystickUp>false</joystickUp>
+      <KeepRepeating>false</KeepRepeating>
+      <UseProcessOverride>true</UseProcessOverride>
+      <ProcessOverride>Elite - Dangerous (CLIENT)</ProcessOverride>
+      <ProcessOverrideActiveWindow>false</ProcessOverrideActiveWindow>
+      <LostFocusStop>false</LostFocusStop>
+      <PauseLostFocus>false</PauseLostFocus>
+      <LostFocusBackCompat>true</LostFocusBackCompat>
+      <UseMouse>false</UseMouse>
+      <Mouse1>false</Mouse1>
+      <Mouse2>false</Mouse2>
+      <Mouse3>false</Mouse3>
+      <Mouse4>false</Mouse4>
+      <Mouse5>false</Mouse5>
+      <Mouse6>false</Mouse6>
+      <Mouse7>false</Mouse7>
+      <Mouse8>false</Mouse8>
+      <Mouse9>false</Mouse9>
+      <MouseUpOnly>false</MouseUpOnly>
+      <MousePassThru>true</MousePassThru>
+      <joystickExclusive>false</joystickExclusive>
+      <lastEditedAction>e106d411-0237-4ac2-8834-5c0a3d3574cc</lastEditedAction>
+      <Referrer xsi:nil="true" />
+      <ExecType>0</ExecType>
+      <Confidence>0</Confidence>
+      <PrefixActionCount>0</PrefixActionCount>
+      <UseProfileProcessOverride>false</UseProfileProcessOverride>
+      <ProfileProcessOverrideActiveWindow>false</ProfileProcessOverrideActiveWindow>
+      <TargetProcessSet>false</TargetProcessSet>
+      <TargetProcessType>0</TargetProcessType>
+      <TargetProcessLevel>0</TargetProcessLevel>
+      <CompareType>0</CompareType>
+      <ExecFromWildcard>false</ExecFromWildcard>
+      <IsSubCommand>false</IsSubCommand>
+      <IsOverride>false</IsOverride>
+      <BaseId>00000000-0000-0000-0000-000000000000</BaseId>
+    </Command>
+  </Commands>
+  <OverrideGlobal>false</OverrideGlobal>
+  <GlobalHotkeyIndex>0</GlobalHotkeyIndex>
+  <GlobalHotkeyEnabled>false</GlobalHotkeyEnabled>
+  <GlobalHotkeyValue>0</GlobalHotkeyValue>
+  <GlobalHotkeyShift>0</GlobalHotkeyShift>
+  <GlobalHotkeyAlt>0</GlobalHotkeyAlt>
+  <GlobalHotkeyCtrl>0</GlobalHotkeyCtrl>
+  <GlobalHotkeyWin>0</GlobalHotkeyWin>
+  <GlobalHotkeyPassThru>false</GlobalHotkeyPassThru>
+  <OverrideMouse>false</OverrideMouse>
+  <MouseIndex>0</MouseIndex>
+  <OverrideStop>false</OverrideStop>
+  <StopCommandHotkeyEnabled>false</StopCommandHotkeyEnabled>
+  <StopCommandHotkeyValue>0</StopCommandHotkeyValue>
+  <StopCommandHotkeyShift>0</StopCommandHotkeyShift>
+  <StopCommandHotkeyAlt>0</StopCommandHotkeyAlt>
+  <StopCommandHotkeyCtrl>0</StopCommandHotkeyCtrl>
+  <StopCommandHotkeyWin>0</StopCommandHotkeyWin>
+  <StopCommandHotkeyPassThru>false</StopCommandHotkeyPassThru>
+  <DisableShortcuts>false</DisableShortcuts>
+  <UseOverrideListening>false</UseOverrideListening>
+  <OverrideJoystickGlobal>false</OverrideJoystickGlobal>
+  <GlobalJoystickIndex>0</GlobalJoystickIndex>
+  <GlobalJoystickButton>0</GlobalJoystickButton>
+  <GlobalJoystickNumber>0</GlobalJoystickNumber>
+  <GlobalJoystickButton2>0</GlobalJoystickButton2>
+  <GlobalJoystickNumber2>0</GlobalJoystickNumber2>
+  <ReferencedProfile xsi:nil="true" />
+  <ExportVAVersion>1.6.1.22</ExportVAVersion>
+  <ExportOSVersionMajor>6</ExportOSVersionMajor>
+  <ExportOSVersionMinor>2</ExportOSVersionMinor>
+  <OverrideConfidence>false</OverrideConfidence>
+  <Confidence>0</Confidence>
+  <CatchAllEnabled>false</CatchAllEnabled>
+  <CatchAllId xsi:nil="true" />
+  <InitializeCommandEnabled>true</InitializeCommandEnabled>
+  <InitializeCommandId>a26f262d-9a62-4903-bd16-8179643dda76</InitializeCommandId>
+  <UseProcessOverride>false</UseProcessOverride>
+  <ProcessOverrideAciveWindow>true</ProcessOverrideAciveWindow>
+  <DictationCommandEnabled>false</DictationCommandEnabled>
+  <DictationCommandId xsi:nil="true" />
+  <EnableProfileSwitch>false</EnableProfileSwitch>
+  <CategoryGroups>
+    <string>keybindings - panels</string>
+    <string>keybindings - power management</string>
+    <string>keybindings - sensors</string>
+    <string>keybindings - take off/docking</string>
+    <string>keybindings - targeting</string>
+    <string>keybindings - wings</string>
+    <string>random sounds - course headings 1</string>
+    <string>random sounds - alerts and warnings</string>
+    <string>keybindings - srv</string>
+    <string>random sounds - questions</string>
+    <string>random sounds - combat</string>
+    <string>keybindings - ui keys</string>
+    <string>random sounds - travel</string>
+    <string>random sounds - locations</string>
+    <string>random sounds - ship functions</string>
+    <string>comms panel</string>
+    <string>defence protocols</string>
+    <string>docking</string>
+    <string>etd</string>
+    <string>etd - impulse</string>
+    <string>etd - increments</string>
+    <string>fighter commands</string>
+    <string>fsd - supercruise</string>
+    <string>hardpoints</string>
+    <string>keybindings - combat</string>
+    <string>keybindings - fighters</string>
+    <string>keybindings - main engines</string>
+    <string>left panel</string>
+    <string>lights</string>
+    <string>locations</string>
+    <string>photography</string>
+    <string>power management</string>
+    <string>profile startup</string>
+    <string>right panel</string>
+    <string>role panel</string>
+    <string>sensors</string>
+    <string>ship's log</string>
+    <string>srv and planetary landings</string>
+    <string>tab cycling</string>
+    <string>targeting</string>
+    <string>wings</string>
+    <string>random sounds - planetry</string>
+    <string>random sounds - engineers</string>
+    <string>education</string>
+    <string>stephen hawking</string>
+    <string>random: quantum theory</string>
+    <string>course headings locations</string>
+    <string>journal commands</string>
+    <string>flight assist</string>
+    <string>fsd - frameshift</string>
+    <string>fsd - jump</string>
+    <string>nebula horsehead</string>
+    <string>questions</string>
+    <string>qt</string>
+    <string>misc.</string>
+    <string>stock market</string>
+    <string>zaonce trade run</string>
+    <string>random sounds - srv</string>
+    <string>random: constellations</string>
+    <string>random: galaxapedia</string>
+    <string>chit-chat</string>
+    <string>cargo scoop</string>
+    <string>keybindings - ship functions</string>
+    <string>random astra</string>
+    <string>engineers</string>
+    <string>panel switching</string>
+    <string>menu navigation</string>
+    <string>misc</string>
+    <string>random sounds</string>
+    <string>keybindings - maps</string>
+    <string>maps</string>
+  </CategoryGroups>
+  <GroupCategory>true</GroupCategory>
+  <LastEditedCommand>bc134a11-95bc-4804-af72-413a67a5b61f</LastEditedCommand>
+</Profile>

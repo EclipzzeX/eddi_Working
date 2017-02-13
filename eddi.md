@@ -1,0 +1,4 @@
+- Add the following to Version two status __TODO__ [Try.html](Try.html)
+- Move this function elsewhere __TODO__ [js\jquery.easytabs.js](js\jquery.easytabs.js)
+- the default cannot safely be changed in Chrome and Safari on OS X.\n//\n\noptgroup {\n  font-weight: bold;\n}\n\n// T... __NOTE__ [css\bootstrap.css.map](css\bootstrap.css.map)
+- This could probably be broken out into many more modular __TODO__ [js\jquery.easytabs.js](js\jquery.easytabs.js)

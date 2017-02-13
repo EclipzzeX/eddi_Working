@@ -1,0 +1,4 @@
+Jumps Completed,Distance
+{INT:jumpsdone},{DEC:jumpdistance}
+82,Not set
+83,8.854
