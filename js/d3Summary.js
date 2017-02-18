@@ -15,7 +15,7 @@ d3Summary = {
           thead = table.append('thead'),
           tbody = table.append('tbody');
           // Debug only
-          console.log(csv_path + " , " + el + " , " + columns[0] + " , " + columns[1]);
+          // console.log(csv_path + " , " + el + " , " + columns[0] + " , " + columns[1]);
 
 $.when($.get(csv_path)).then(
 
@@ -26,21 +26,11 @@ $.when($.get(csv_path)).then(
             }
           )
           .rollup(function(d) {
-              // d3.format wraps g.Reward to give integer value ","
-              // return multiple formats... how to display them??
-              return {
-                colu2: d3.format(",")(d3.sum(d, function(g) {return g[columns[1]]; })),
-                colu3: d.length
-            };
-
-              //return d3.sum(d, function(g) {return g.Reward; });
+              // g[columns[1] bellow specifies the second column from the called .csv]
+              return d3.sum(d, function(g) {return g[columns[1]]; });
             }
-
           )
-          // var display = data();
-
           .entries(csv_data);
-          console.log(colu2 + " , " + colu3);
         // For each value returned from the d3.csv(csv_path), return a table entry...
         //append the Header row
         thead.append('tr')

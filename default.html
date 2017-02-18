@@ -121,9 +121,37 @@
       <div id='1table-container1'></div>
         <b>Login History</b>
       <div id='1table-container2'></div>
-        <b>Bounty Summary</b>
+        
       </div>
 
+      <script>
+        var Stuff = [];
+        var Front = [];
+        var col1 = [];
+        var col2 = [];
+
+        myFunction("gi");
+        for (var data_id = 0; data_id < Stuff.length; data_id++) {
+          CsvToHtmlTable.init(
+            {
+              csv_path: Stuff[data_id],
+              element: '1table-container'+data_id,
+              csv_options: {separator: ',', delimiter: '""'}
+            }
+          );
+        };
+
+      for (var data_id = 0; data_id < Front.length; data_id++) {
+          d3Summary.init(
+            {
+              csv_path: Front[data_id],
+              element:  'gfunction-container'+data_id,
+              columns:  [col1[data_id],col2[data_id]],
+              headers:  [col1[data_id],col2[data_id]]
+            }
+          );
+        };
+       </script>
     </div id>
 
      <div id="bounty-html">
@@ -161,9 +189,6 @@
           );
         };
 
-
-//        myFunction2("y");
-//                  //console.log(Front[0]);
       for (var data_id = 0; data_id < Front.length; data_id++) {
           d3Summary.init(
             {
