@@ -58,12 +58,12 @@ tr:hover {
 }
 
 /* Example Styles for Demo */
-.etabs {
+.etabs, .sub-etabs {
   margin: 0;
   padding: 0;
 }
 
-.tab {
+.tab, ul, ul li {
   display: inline-block;
   zoom:1; *display:inline;
   border: solid 1px #999;
@@ -81,7 +81,7 @@ tr:hover {
   background-color: #1b1b1d;
 }
 
-.tab a {
+.tab a, ul li a {
   font-size: 14px;
   line-height: 2em;
   display: block;
@@ -95,12 +95,12 @@ tr:hover {
   background-color: #1b1b1d;
 }
 
-.tab a:hover {
+.tab a:hover, ul li a:hover {
   text-decoration:
   underline;
 }
 
-.tab.active {
+.tab.active, ul li.active{
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
   color: #d0d0d0;
   padding: 0px;
@@ -111,7 +111,7 @@ tr:hover {
   background-color: #1b1b1d;
 }
 
-.tab a.active {
+.tab a.active, ul li a.active {
   font-weight: bold;
   background-color: #c38328;
 }

@@ -1,5 +1,5 @@
 /*
- * jQuery EasyTabs plugin 3.2.0
+ * jQuery EasyTabs plugin 3.2.0.DR
  *
  * Copyright (c) 2010-2011 Steve Schwartz (JangoSteve)
  *
@@ -8,6 +8,7 @@
  *   http://www.gnu.org/licenses/gpl.html
  *
  * Date: Thu May 09 17:30:00 2013 -0500
+ *       Mon Feb 20 06:56:00 2017 - Line 583
  */
 ( function($) {
 
@@ -580,7 +581,10 @@
         plugin.tabs.filter("." + settings.collapsedClass).removeClass(settings.collapsedClass).children().removeClass(settings.collapsedClass);
         $clicked.parent().addClass(settings.tabActiveClass).children().addClass(settings.tabActiveClass);
 
-        plugin.panels.filter("." + settings.panelActiveClass).removeClass(settings.panelActiveClass);
+        //
+        // Add/Delete ref: https://github.com/CableGuy67/jQuery-EasyTabs/commit/c9ac0e096f589d275f83b3ca878704785e007a2c
+        // plugin.panels.filter("." + settings.panelActiveClass).removeClass(settings.panelActiveClass);
+        plugin.panels.filter("." + settings.panelActiveClass).removeClass(settings.panelActiveClass).hide();
         $targetPanel.addClass(settings.panelActiveClass);
 
         if( $visiblePanel.length ) {
