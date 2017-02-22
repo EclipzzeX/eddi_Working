@@ -27,7 +27,7 @@ $.when($.get(csv_path)).then(
           )
           .rollup(function(d) {
               // g[columns[1] bellow specifies the second column from the called .csv]
-              return d3.sum(d, function(g) {return g[columns[1]]; });
+              return d3.format(',')(d3.sum(d, function(g) {return g[columns[1]]; }));
             }
           )
           .entries(csv_data);
